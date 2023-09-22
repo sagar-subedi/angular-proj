@@ -1,2 +1,16 @@
-<p>card works! The name is {{ name }} </p>
-<p>The number is {{num}}</p>
+
+<mat-card>
+    <mat-card-actions>
+
+        <div class="btn-col">
+            <button mat-button [disabled]="isLikeDisabled" (click)="onLike()">LIKE</button>
+            <button mat-button [disabled]="isLikeDisabled" (click)="onUnlike()">Unlike</button>
+        </div>
+       
+        <p>Like Count: {{likeCount}}</p>
+        <button mat-button [disabled]="isShareDisabled">SHARE</button>
+      </mat-card-actions>
+
+      <p [style.fontSize]="size">Server with Id {{title}} is {{port}}</p>
+      <p [style]="style">Server status from method: {{port}}</p>
+  </mat-card>
